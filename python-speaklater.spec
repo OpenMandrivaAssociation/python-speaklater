@@ -28,3 +28,15 @@ is evaluated based on a callable you provide.
 %files
 %{python_sitelib}/speaklater*
 %doc PKG-INFO
+
+
+%changelog
+* Fri Aug 17 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
++ Revision: 815276
+- Bump release and rebuild.
+
+* Fri Aug 17 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
++ Revision: 815267
+- Import python-speaklater (based on fedora package)
+- Import python-speaklater (based on fedora package)
+
