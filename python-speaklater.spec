@@ -9,7 +9,7 @@ License:        BSD
 URL:            http://github.com/mitsuhiko/speaklater
 Source0:        http://pypi.python.org/packages/source/s/%{tarName}/%{tarName}-%{version}.tar.gz
 BuildArch:      noarch
-%py_requires -d
+BuildRequires:  python-devel
 
 %description
 A module that provides lazy strings for translations. Basically you get an
