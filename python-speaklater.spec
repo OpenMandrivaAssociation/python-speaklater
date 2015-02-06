@@ -2,7 +2,7 @@
 
 Name:           python-%{tarName}
 Version:        1.3
-Release:        1
+Release:        2
 Summary:        Implements a lazy string for python useful for use with get-text
 
 Group:          Development/Python
