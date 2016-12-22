@@ -2,7 +2,7 @@
 
 Name:           python-%{tarName}
 Version:        1.3
-Release:        2
+Release:        3
 Summary:        Implements a lazy string for python useful for use with get-text
 
 Group:          Development/Python
@@ -11,6 +11,7 @@ URL:            http://github.com/mitsuhiko/speaklater
 Source0:        http://pypi.python.org/packages/source/s/speaklater/speaklater-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-devel
+BuildRequires:	python-setuptools
 
 %description
 A module that provides lazy strings for translations. Basically you get an
