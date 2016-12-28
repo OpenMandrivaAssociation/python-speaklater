@@ -12,24 +12,36 @@ Source0:        http://pypi.python.org/packages/source/s/speaklater/speaklater-%
 BuildArch:      noarch
 BuildRequires:  python-devel
 BuildRequires:	python-setuptools
+BuildRequires:	python2-devel
+BuildRequires:	python2-setuptools
 
 %description
 A module that provides lazy strings for translations. Basically you get an
 object that appears to be a string but changes the value every time the value
 is evaluated based on a callable you provide.
 
+%package -n python2-%{tarName}
+
 %prep
 %setup -qn %{tarName}-%{version}
 
+cp -a . %py2dir
 %build
 python setup.py build
 
+pushd %py2dir
+python2 setup.py build
+
 %install
 python setup.py install --root=%{buildroot}
+
+pushd %py2dir
+python2 setup.py install --root=%{buildroot}
 
 %files
 %{py_puresitedir}/speaklater*
 %doc PKG-INFO
 
-
-
+%files -n python2-%{tarName}
+%{py2_puresitedir}/speaklater*
+%doc PKG-INFO
